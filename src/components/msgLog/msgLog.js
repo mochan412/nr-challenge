@@ -6,9 +6,6 @@ import PropTypes from 'prop-types';
 class MsgLog extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-    }
   }
 
   render() {
@@ -17,11 +14,15 @@ class MsgLog extends Component {
       return <li key={index}>{item}</li>
     })
     return (
-      <ul className={styles.msgLog}>  
+      <ul className={styles.msgLog}>
         {log}
       </ul>
     )
   }
+}
+
+MsgLog.propTypes = {
+  logsArray: PropTypes.array.isRequired
 }
 
 export default MsgLog;

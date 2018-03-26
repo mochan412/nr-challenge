@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
     }
 
-    //record text
+    //record text - could send message to backend at this point to log/print messages
     if (msg.type == 1) {
       this.writeText(msg.text, msg.time.toString())
     }
@@ -62,7 +62,7 @@ export default class App extends React.Component {
     return (
       <div className={styles.app}>
         <header>
-          <h1>Outage Tracker</h1>
+          <h1>Outage Logger</h1>
           <StartButton
             sendMessage={this.sendMessage}
            />

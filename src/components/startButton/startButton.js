@@ -58,4 +58,8 @@ class StartButton extends Component {
   }
 }
 
+StartButton.propTypes = {
+  sendMessage: PropTypes.func.isRequired
+}
+
 export default StartButton;

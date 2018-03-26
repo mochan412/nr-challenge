@@ -22,7 +22,6 @@
     "classnames": "^2.2.5",
     "d3": "^4.13.0",
     "d3-webpack-loader": "^0.1.1",
-    "fs": "0.0.1-security",
     "lodash": "^4.17.5",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

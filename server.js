@@ -31,11 +31,6 @@ app.get('/src', function response(req, res) {
   res.end();
 });
 
-app.get('/message', (req, res) => {
-  console.log(req.body)
-    res.send(req.body)
-});
-
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {
     console.log(err);
