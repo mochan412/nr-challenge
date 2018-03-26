@@ -1,0 +1,11 @@
+.app {
+  padding:20px;
+  font-family:'Source Sans Pro', Arial, sans-serif;
+  box-sizing: border-box;
+  width:940px;
+  position: relative;
+}
+
+h1 {
+  margin:0 0 20px 0;
+}
