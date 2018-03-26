@@ -22,10 +22,12 @@ export default class App extends React.Component {
     //start recording
     if (msg.type == 0) {
       this.setState({
+        logsArray: [],
         started: true
+      }, ()=>{
+        this.writeText(msg.text, msg.time.toString())
       })
 
-      this.writeText(msg.text, msg.time.toString())
     }
 
     //record text
@@ -36,8 +38,7 @@ export default class App extends React.Component {
     //end recording
     if (msg.type == 2) {
       this.setState({
-        started: false,
-        logsArray: []
+        started: false
       })
     }
   }
@@ -54,10 +55,7 @@ export default class App extends React.Component {
     let body = null;
     if (this.state.started) {
       body = (
-        <div>
-          <MsgForm sendMessage={this.sendMessage}/>
-          <MsgLog logsArray={this.state.logsArray} />
-        </div>
+        <MsgForm sendMessage={this.sendMessage}/>
       )
 
     }
@@ -72,6 +70,7 @@ export default class App extends React.Component {
 
         {body}
 
+        <MsgLog logsArray={this.state.logsArray} />
 
       </div>
     );

@@ -8,46 +8,61 @@ class MsgForm extends Component {
     super(props);
 
     this.state = {
-      description: ''
+      description: '',
+      error: false
     }
 
     this.changeEvent = this.changeEvent.bind(this);
   }
 
   changeEvent(e) {
-    this.setState({
-      description: e.target.value
-    })
+    let newState = {};
+    if (e.target.value.length > 0) {
+      newState.error = false
+    }
+    newState.description = e.target.value;
+    this.setState(newState)
   }
 
   submitEvent(e) {
     e.preventDefault();
 
-    //success case
-    let msgObject = {
-      type: 1,
-      time: new Date(),
-      text: this.state.description
+    if (this.state.description.length > 0) {
+      let msgObject = {
+        type: 1,
+        time: new Date(),
+        text: this.state.description
+      }
+
+      this.props.sendMessage(msgObject);
+      this.setState({
+        description: ''
+      })
+    } else {
+      this.setState({
+        error: true
+      })
     }
 
-    this.props.sendMessage(msgObject);
-    this.setState({
-      description: ''
-    })
   }
 
 
   render() {
+    let error = null
+    if (this.state.error) {
+      error = <div className={styles.error}>please add a new message</div>
+    }
     return (
       <div className={styles.msgForm}>
         <form onSubmit={e => {this.submitEvent(e)}}>
           <textarea
             rows="2"
-            placeholder="enter outage description"
+            placeholder="add a new note"
             value={this.state.description}
             onChange={e => {this.changeEvent(e)}}>
           </textarea>
-          <button type="submit">submit new message</button>
+          {error}
+          <button type="submit">submit new note</button>
         </form>
       </div>
     )

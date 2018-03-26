@@ -12,7 +12,7 @@
 .msgForm textarea{
   box-sizing: border-box;
   width:100%;
-  min-height:100px;
+  min-height:80px;
   outline: none;
   resize: none;
   text-align: left;
@@ -35,4 +35,10 @@
   border-radius: 4px;
   text-transform: uppercase;
   color:#666;
+}
+
+.error {
+  color:red;
+  text-align: left;
+  font-size: 12px;
 }

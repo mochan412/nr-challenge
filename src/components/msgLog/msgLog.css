@@ -1,0 +1,28 @@
+.msgLog {
+  clear: both;
+  max-width:600px;
+  margin:20px auto 0;
+  list-style-type: none;
+  padding:20px 0 0 0;
+}
+
+.msgLog li {
+  margin:14px 0px;
+}
+
+.msgLog li > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.msgLog li > div span:nth-child(1) {
+  color:#000;
+  font-size: 14px;
+}
+
+.msgLog li > div span:nth-child(2) {
+  color:#666;
+  font-size: 12px;
+  min-width: 220px;
+  text-align: right;
+}
