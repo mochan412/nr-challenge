@@ -42,7 +42,7 @@ class MsgForm extends Component {
       <div className={styles.msgForm}>
         <form onSubmit={e => {this.submitEvent(e)}}>
           <textarea
-            rows="3"
+            rows="2"
             placeholder="enter outage description"
             value={this.state.description}
             onChange={e => {this.changeEvent(e)}}>

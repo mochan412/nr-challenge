@@ -23,7 +23,7 @@ class StartButton extends Component {
     let msgObject = {
       type: 0,
       time: new Date(),
-      text: 'start of incident'
+      text: 'beginning of incident'
     }
 
     this.props.sendMessage(msgObject);

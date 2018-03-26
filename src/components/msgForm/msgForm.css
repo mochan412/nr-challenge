@@ -5,14 +5,14 @@
 }
 
 .msgForm form {
-  max-width:500px;
+  max-width:600px;
   margin:0px auto;
 }
 
 .msgForm textarea{
   box-sizing: border-box;
   width:100%;
-  min-height:200px;
+  min-height:100px;
   outline: none;
   resize: none;
   text-align: left;
