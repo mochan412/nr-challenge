@@ -2,10 +2,19 @@
   padding:20px;
   font-family:'Source Sans Pro', Arial, sans-serif;
   box-sizing: border-box;
-  width:940px;
+  max-width:940px;
   position: relative;
+  margin:0px auto;
+}
+
+.app header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 h1 {
-  margin:0 0 20px 0;
+  font-size: 24px;
+  margin:0;padding:0;
 }

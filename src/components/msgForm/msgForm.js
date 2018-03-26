@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import styles from './textArea.css';
+import styles from './msgForm.css';
 import PropTypes from 'prop-types';
 
 
-class TextArea extends Component {
+class MsgForm extends Component {
   constructor(props) {
     super(props);
 
@@ -39,7 +39,7 @@ class TextArea extends Component {
 
   render() {
     return (
-      <div className={styles.textArea}>
+      <div className={styles.msgForm}>
         <form onSubmit={e => {this.submitEvent(e)}}>
           <textarea
             rows="3"
@@ -47,11 +47,11 @@ class TextArea extends Component {
             value={this.state.description}
             onChange={e => {this.changeEvent(e)}}>
           </textarea>
-          <button type="submit">submit message</button>
+          <button type="submit">submit new message</button>
         </form>
       </div>
     )
   }
 }
 
-export default TextArea;
+export default MsgForm;

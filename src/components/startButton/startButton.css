@@ -1,3 +1,38 @@
+.buttonContainer {
+
+
+}
+
+.buttonContainer button {
+  padding:10px;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color:#666;
+  border-color: #666;
+}
+
+.button:before {
+  content: '';
+  width:14px;
+  height:14px;
+  display: block;
+  float:left;
+  border-radius: 50%;
+  margin-right:8px;
+}
+
 .startButton {
-  
+  composes: button;
+}
+
+.endButton {
+  composes: button;
+}
+.startButton:before {
+  background-color:green;
+}
+.endButton:before {
+  background-color:red;
 }

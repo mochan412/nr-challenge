@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './main.css';
 
 import StartButton from './components/startButton/startButton.js';
-import TextArea from './components/textArea/textArea.js';
+import MsgForm from './components/msgForm/msgForm.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -26,6 +26,7 @@ export default class App extends React.Component {
     //record text
     if (msg.type == 1) {
       console.log(msg.text)
+
     }
 
     //end recording
@@ -37,18 +38,21 @@ export default class App extends React.Component {
   }
 
   render() {
-    let textArea = null;
+    let body = null;
     if (this.state.started) {
-      textArea = <TextArea sendMessage={this.sendMessage}/>
+      body = <MsgForm sendMessage={this.sendMessage}/>
     }
     return (
       <div className={styles.app}>
-        <h1>Outage Tracker</h1>
+        <header>
+          <h1>Outage Tracker</h1>
+          <StartButton
+            sendMessage={this.sendMessage}
+           />
+        </header>
 
-        {textArea}
-        <StartButton
-          sendMessage={this.sendMessage}
-         />
+        {body}
+
 
       </div>
     );

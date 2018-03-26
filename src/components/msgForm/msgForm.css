@@ -1,0 +1,38 @@
+.msgForm {
+  width:100%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.msgForm form {
+  max-width:500px;
+  margin:0px auto;
+}
+
+.msgForm textarea{
+  box-sizing: border-box;
+  width:100%;
+  min-height:200px;
+  outline: none;
+  resize: none;
+  text-align: left;
+  font-size:12px;
+  padding:10px;
+}
+
+.msgForm::placeholder {
+  font-style:italic;
+  color:#ccc;
+}
+
+.msgForm button {
+  margin-top: 10px;
+  float:right;
+  clear: both;
+  padding:8px;
+  letter-spacing: 1px;
+  font-size: 11px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color:#666;
+}

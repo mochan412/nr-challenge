@@ -46,12 +46,12 @@ class StartButton extends Component {
   render() {
     let startBtn = null
     if (this.state.showStart) {
-      startBtn = <button onClick={this.startEvent}>start recording</button>
+      startBtn = <button onClick={this.startEvent} className={styles.startButton}>start recording</button>
     } else {
-      startBtn = <button onClick={this.endEvent}>end recording</button>
+      startBtn = <button onClick={this.endEvent} className={styles.endButton}>end recording</button>
     }
     return (
-      <div className={styles.startButton}>
+      <div className={styles.buttonContainer}>
         {startBtn}
       </div>
     )
